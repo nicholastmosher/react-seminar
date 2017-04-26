@@ -3,10 +3,14 @@ import { connect } from 'react-redux';
 import { sayHello } from '../actions/AppActions';
 
 const AppContainer = (props) => (
-  <div>
-    <h1>Hello, {props.name}!</h1>
-    <button onClick={() => props.greet('Jack')}>Jack</button>
-    <button onClick={() => props.greet('Linda')}>Linda</button>
+  <div className="container-fluid">
+    <div className="row">
+      <h1>Hello, {props.name}!</h1>
+    </div>
+    <div className="row">
+      <button className="btn" onClick={() => props.greet('Jack')}>Jack</button>
+      <button className="btn" onClick={() => props.greet('Linda')}>Linda</button>
+    </div>
   </div>
 );
 
